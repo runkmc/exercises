@@ -1,0 +1,23 @@
+#lang racket
+(define (rounding x)
+  (/ (round (* 100 x)) 100))
+
+(print "Enter the price of item 1: ")
+(define p1 (string->number (read-line)))
+(print "Enter the quantity of item 1: ")
+(define q1 (string->number (read-line)))
+(print "Enter the price of item 2: ")
+(define p2 (string->number (read-line)))
+(print "Enter the quantity of item 2: ")
+(define q2 (string->number (read-line)))
+(print "Enter the price of item 3: ")
+(define p3 (string->number (read-line)))
+(print "Enter the quantity of item 3: ")
+(define q3 (string->number (read-line)))
+(define subtotal (rounding (real->double-flonum (+ (* p1 q1) (* p2 q2) (* p3 q3)))))
+(define tax (rounding (real->double-flonum (* subtotal 0.055))))
+(define total (rounding (real->double-flonum (+ subtotal tax))))
+
+(printf "Subtotal: $~a~n" subtotal)
+(printf "Tax: $~a~n" tax)
+(printf "Total: $~a~n" total)
