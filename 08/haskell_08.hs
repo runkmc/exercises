@@ -1,10 +1,10 @@
-pieces :: Int -> Int
+pieces :: Integral a => a -> a
 pieces x = 8 * x
 
-pieces_per_person :: Int -> Int -> Int
+pieces_per_person :: Integral a => a -> a -> a
 pieces_per_person people pizzas = (pieces pizzas) `div` people
 
-leftovers :: Int -> Int -> Int
+leftovers :: Integral a => a -> a -> a
 leftovers people pizzas = (pieces pizzas) `mod` people
 
 main = do
