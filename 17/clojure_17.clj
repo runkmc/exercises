@@ -1,8 +1,8 @@
 (defmulti bac (fn [ounces weight sex hours] sex))
 (defmethod bac "M" [ounces weight sex hours]
-  (- (/ (* ounces 5.14) (* weight 0.73)) (* hours 0.15)))
+  (- (/ (* ounces 5.14) (* weight 0.73)) (* hours 0.015)))
 (defmethod bac "F" [ounces weight sex hours]
-  (- (/ (* ounces 5.14) (* weight 0.66)) (* hours 0.15)))
+  (- (/ (* ounces 5.14) (* weight 0.66)) (* hours 0.015)))
 
 (println "Ounces: ")
 (def ounces (Integer. (re-find #"\d+" (read-line))))
