@@ -5,7 +5,7 @@ check_bac ounces weight gender hours
     where bac_number = bac ounces weight gender hours
 
 bac :: Double -> Double -> String -> Double -> Double
-bac ounces weight gender hours = ((ounces * 5.14) / (weight * g)) - (0.15 * hours)
+bac ounces weight gender hours = ((ounces * 5.14) / (weight * g)) - (0.015 * hours)
     where g = gender_number gender
 
 gender_number :: String -> Double
