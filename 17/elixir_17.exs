@@ -1,11 +1,11 @@
 defmodule BAC do
   def check oz, weight, "M", hours do
-    total = ((oz * 5.14) / (weight * 0.73)) - (0.15 * hours)
+    total = ((oz * 5.14) / (weight * 0.73)) - (0.015 * hours)
     reply total
   end
 
   def check oz, weight, "F", hours do
-    total = ((oz * 5.14) / (weight * 0.66)) - (0.15 * hours)
+    total = ((oz * 5.14) / (weight * 0.66)) - (0.015 * hours)
     reply total
   end
 
