@@ -8,7 +8,7 @@ class BAC
   end
 
   def bac_number
-    (@oz * (5.14 / @weight) * @gender) - (0.15 * @hours)
+    (@oz * (5.14 / @weight) * @gender) - (0.015 * @hours)
   end
 
   def legal?
