@@ -6,4 +6,3 @@ print("Who said it?")
 let author = readLine()! 
 
 print(author + " says, \"" + quote + "\"")
-
