@@ -1,15 +1,9 @@
 import Foundation
 
-func input() -> String {
-	let inputString = NSFileHandle.fileHandleWithStandardInput().availableData
-	let strData = NSString(data: inputString, encoding: NSUTF8StringEncoding)!
-	return strData.stringByTrimmingCharactersInSet(NSCharacterSet.newlineCharacterSet())
-}
-
 print("What is the quote?")
-let quote = input()
+let quote = readLine()!
 print("Who said it?")
-let author = input()
+let author = readLine()! 
 
 print(author + " says, \"" + quote + "\"")
 
