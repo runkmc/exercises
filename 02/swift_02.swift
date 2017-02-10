@@ -1,11 +1,7 @@
 import Foundation
 
-func input() -> String {
-	let inputString = NSFileHandle.fileHandleWithStandardInput().availableData
-	let strData = NSString(data: inputString, encoding: NSUTF8StringEncoding)!
-	return strData.stringByTrimmingCharactersInSet(NSCharacterSet.newlineCharacterSet())
-}
-
 print("What is the input string?")
-let inp = input()
-print("\(inp) has \(inp.characters.count) characters.")
+let inp = readLine()
+inp.map { value in
+	print("\(value) has \(value.characters.count) characters.")
+}
