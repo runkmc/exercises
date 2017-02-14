@@ -1,15 +1,9 @@
 import Foundation
 
-func input() -> String {
-	let inputString = NSFileHandle.fileHandleWithStandardInput().availableData
-	let strData = NSString(data: inputString, encoding: NSUTF8StringEncoding)!
-	return strData.stringByTrimmingCharactersInSet(NSCharacterSet.newlineCharacterSet())
-}
-
 print("What is the first number?")
-let first = Int(input())!
+let first = Int(readLine()!)!
 print("What is the second number?")
-let second = Int(input())!
+let second = Int(readLine()!)!
 
 print("\(first) + \(second) = \(first + second)")
 print("\(first) - \(second) = \(first - second)")
